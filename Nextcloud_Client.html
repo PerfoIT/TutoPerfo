@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriel : Installation et Paramétrage du Client Nextcloud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #0082C9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 15%;
+            height: auto;
+        }
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0082C9;
+            border-bottom: 2px solid #0082C9;
+            padding-bottom: 5px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .screenshot-placeholder {
+            height: 300px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #6c757d;
+            border: 2px dashed #ccc;
+        }
+        .screenshot-placeholder img {
+            max-width: 90%;
+            height: auto;
+            border: none;
+        }
+        .important {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0082C9;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cloud.perfo.fr/index.php/s/cKPL4TECZcJt4YT/preview" alt="Logo PERFO" style="max-width: 10%; height: auto;">
+        <h1>Tutoriel : Installation et Paramétrage du Client Nextcloud</h1>
+        <p>Guide détaillé pour installer et configurer le client Nextcloud sur votre ordinateur</p>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Étape 1 : Téléchargement du Client Nextcloud</h2>
+            <ol>
+                <li>Ouvrez votre navigateur web (Google Chrome, Mozilla Firefox, etc.).</li>
+                <li>Accédez au site officiel de Nextcloud : <a href="https://nextcloud.com/install/#install-clients" target="_blank">https://nextcloud.com/install/#install-clients</a>.</li>
+                <li>Faites défiler la page jusqu'à la section intitulée <strong>"Desktop Clients"</strong>.</li>
+                <li>Cliquez sur le lien correspondant à votre système d'exploitation :
+                    <ul>
+                        <li><strong>Windows</strong> : Cliquez sur "Windows Installer".</li>
+                        <li><strong>Mac</strong> : Cliquez sur "Mac Installer (Intel)" ou "Mac Installer (Apple Silicon)" selon votre modèle.</li>
+                        <li><strong>Linux</strong> : Suivez les instructions spécifiques pour votre distribution Linux.</li>
+                    </ul>
+                </li>
+                <li>Le fichier d'installation sera téléchargé sur votre ordinateur. Notez l'emplacement du fichier (généralement dans le dossier "Téléchargements").</li>
+            </ol>
+
+        </section>
+        <section>
+            <h2>Étape 2 : Installation du Client Nextcloud</h2>
+            <ol>
+                <li>Recherchez le fichier téléchargé dans votre dossier "Téléchargements".</li>
+                <li>Faites un double-clic sur le fichier pour lancer l'installation.</li>
+                <li>Suivez les instructions de l'assistant d'installation :
+                    <ul>
+                        <li>Acceptez les termes et conditions.</li>
+                        <li>Choisissez l'emplacement d'installation (par défaut, c'est généralement correct).</li>
+                        <li>Cliquez sur <strong>"Installer"</strong> ou <strong>"Suivant"</strong> selon les étapes.</li>
+                    </ul>
+                </li>
+                <li>Une fois l'installation terminée, cochez l'option <strong>"Lancer Nextcloud"</strong> si elle est disponible, puis cliquez sur <strong>"Terminer"</strong>.</li>
+            </ol>
+
+        </section>
+        <section>
+            <h2>Étape 3 : Configuration Initiale avec Authentification SSO</h2>
+            <ol>
+                <li>Une fois le client Nextcloud lancé, une fenêtre de configuration s'affiche.</li>
+                <li>Dans le champ <strong>"Serveur"</strong>, entrez l'URL de votre serveur Nextcloud. Par exemple : <code>https://cloud.perfo.fr</code>.</li>
+                <li>Cliquez sur <strong>"Suivant"</strong>.</li>
+                <li>Une fenêtre de connexion s'ouvre automatiquement, redirigeant vers <strong>App Perfo</strong> (<code>https://app.perfo.fr</code>). Vous devrez vous authentifier avec vos identifiants App Perfo, précédemment crées :
+                    <ul>
+                        <li>Entrez votre nom d'utilisateur ou votre adresse e-mail.</li>
+                        <li>Entrez votre mot de passe.</li>
+                        <li>Si vous utilisez l'authentification à deux facteurs (2FA), saisissez le code unique généré par votre application mobile.</li>
+                    </ul>
+                </li>
+                <li>Après une authentification réussie, vous serez redirigé vers Nextcloud et connecté automatiquement.</li>
+            </ol>
+            <div class="important">
+                <strong>Important :</strong> L'authentification se fait via App Perfo (<code>https://app.perfo.fr</code>) grâce au système de Single Sign-On (SSO). Assurez-vous d'utiliser les mêmes identifiants que ceux configurés dans App Perfo.
+            </div>
+
+        </section>
+        <section>
+            <h2>Étape 4 : Activation de la Synchronisation Virtuelle</h2>
+            <ol>
+                <li>Une fois connecté, une nouvelle fenêtre apparaît pour configurer la synchronisation des fichiers.</li>
+                <li>Pour éviter de consommer de l'espace disque local, activez la <strong>synchronisation virtuelle</strong> :
+                    <ul>
+                        <li>Cochez l'option <strong>"Synchronisation virtuelle"</strong> (ou similaire) dans les paramètres.</li>
+                        <li>Cette fonctionnalité permet d'accéder à vos fichiers en ligne sans les télécharger physiquement sur votre ordinateur.</li>
+                        <li>Les fichiers seront accessibles via l'explorateur de fichiers, mais ils ne seront téléchargés que lorsque vous les ouvrirez explicitement.</li>
+                    </ul>
+                </li>
+                <li>Choisissez un emplacement local pour le dossier virtuel. Par défaut, un dossier "Nextcloud" sera créé dans votre répertoire personnel.</li>
+                <li>Cliquez sur <strong>"Terminer"</strong> pour finaliser la configuration.</li>
+            </ol>
+            <div class="important">
+                <strong>Conseil :</strong> Utilisez la synchronisation virtuelle pour économiser de l'espace disque local tout en ayant un accès rapide à vos fichiers. Évitez de synchroniser tous les fichiers localement, car cela peut ralentir votre ordinateur.
+            </div>
+
+        </section>
+        <section>
+            <h2>Étape 5 : Vérification et Utilisation</h2>
+            <ol>
+                <li>Ouvrez l'explorateur de fichiers de votre ordinateur et naviguez jusqu'au dossier "Nextcloud".</li>
+                <li>Vous verrez une liste de fichiers et dossiers disponibles sur le serveur Nextcloud.</li>
+                <li>Double-cliquez sur un fichier pour l'ouvrir. Le fichier sera téléchargé temporairement et ouvert dans l'application associée.</li>
+                <li>Les modifications apportées aux fichiers seront automatiquement synchronisées avec le serveur Nextcloud.</li>
+            </ol>
+
+        </section>
+        <section>
+            <h2>Conseils Importants</h2>
+            <ul>
+                <li><strong>Gardez votre client Nextcloud ouvert :</strong> Pour garantir une synchronisation continue, assurez-vous que le client Nextcloud est toujours actif sur votre ordinateur.</li>
+                <li><strong>Utilisez la synchronisation virtuelle :</strong> Privilégiez cette option pour éviter de consommer de l'espace disque local inutilement.</li>
+                <li><strong>Mettez régulièrement à jour le client :</strong> Vérifiez périodiquement les mises à jour du client Nextcloud pour profiter des dernières fonctionnalités et corrections de sécurité.</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        Pour toute assistance, contactez moi : <a href="mailto:q.marques.perfo@gmail.com" style="color: white;">q.marques.perfo@gmail.com</a>
+    </footer>
+</body>
+</html>
