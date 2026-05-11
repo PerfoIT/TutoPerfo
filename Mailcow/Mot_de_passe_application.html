@@ -4,26 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutoriel : Créer un mot de passe d’application mail</title>
-  <style>
-    :root { --perfo-blue:#123f8c; --perfo-blue-dark:#0a2b62; --perfo-red:#e30613; --border:#dbe3ef; --text:#1d2430; --muted:#5c6675; --white:#fff; }
-    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,#eef3fa 0%,#fff 34%);line-height:1.6} header{background:#fff;border-bottom:4px solid var(--perfo-blue);padding:22px 24px;box-shadow:0 6px 24px rgba(18,63,140,.08)} .header-inner{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:18px}.logo{width:135px}.brand-fallback{display:inline-flex;align-items:center;justify-content:center;min-width:135px;min-height:54px;border:2px solid var(--perfo-blue);color:var(--perfo-blue);font-weight:800;letter-spacing:1px;border-radius:10px} main{max-width:980px;margin:28px auto;padding:0 18px 36px}.hero,section{background:#fff;border:1px solid var(--border);border-radius:18px;padding:28px;box-shadow:0 12px 34px rgba(18,63,140,.10)}section{margin-top:24px;border-radius:16px;padding:24px;box-shadow:0 8px 22px rgba(18,63,140,.06)}.hero{position:relative;overflow:hidden}.hero:before{content:"";position:absolute;top:0;left:0;width:100%;height:7px;background:linear-gradient(90deg,var(--perfo-blue),#fff,var(--perfo-red))}h1{margin:0 0 8px;color:var(--perfo-blue-dark);font-size:2rem;line-height:1.2}.subtitle{color:var(--muted);margin:0}h2{margin-top:0;color:var(--perfo-blue);border-bottom:1px solid var(--border);padding-bottom:10px}h3{color:var(--perfo-blue-dark)}ol,ul{padding-left:24px}li{margin:7px 0}.notice{margin:18px 0;padding:15px 18px;border-left:5px solid var(--perfo-red);background:#fff5f5;border-radius:10px;font-weight:700}.info{margin:18px 0;padding:15px 18px;border-left:5px solid var(--perfo-blue);background:#f2f6fd;border-radius:10px}code{background:#eef3fa;color:var(--perfo-blue-dark);padding:2px 6px;border-radius:6px;font-weight:700}.steps{counter-reset:step;padding:0;list-style:none}.steps>li{counter-increment:step;margin:16px 0;padding:16px 16px 16px 58px;border:1px solid var(--border);border-radius:14px;position:relative;background:#fbfdff}.steps>li:before{content:counter(step);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--perfo-blue);color:white;display:flex;align-items:center;justify-content:center;font-weight:800}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{border:1px solid var(--border);padding:11px;text-align:left;vertical-align:top}th{background:#eef3fa;color:var(--perfo-blue-dark)}.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.btn{display:inline-block;text-decoration:none;color:#fff;background:var(--perfo-blue);padding:11px 16px;border-radius:999px;font-weight:700}.btn.secondary{background:var(--perfo-blue-dark)}footer{max-width:980px;margin:0 auto 28px;padding:18px;color:var(--muted);font-size:.95rem;text-align:center}@media print{body{background:#fff}header,section,.hero{box-shadow:none}section{break-inside:avoid;page-break-inside:avoid}.btn-row{display:none}a{color:var(--perfo-blue-dark);text-decoration:none}}
-  </style>
+  <link rel="stylesheet" href="../assets/css/perfo-tutos.css" />
 </head>
 <body>
-<header><div class="header-inner"><img class="logo" src="../assets/img/logo.svg" alt="Logo PERFO" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand-fallback',textContent:'PERFO'}))"/><div><strong>Guides PERFO IT</strong><br><span>Messagerie PERFO — Configuration avancée</span></div></div></header>
-<main>
-  <div class="hero"><h1>Tutoriel : Créer un mot de passe d’application mail</h1><p class="subtitle">À utiliser uniquement si vous souhaitez ajouter votre compte PERFO dans Outlook, Thunderbird, Apple Mail, Gmail mobile ou une autre application.</p><div class="notice">Pour utiliser SOGo depuis AppPerfo, vous n’avez pas besoin de mot de passe d’application.</div></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/img/logo-perfo-blanc.svg" alt="Logo PERFO" />
+          <div class="brand-text">Guides PERFO IT</div>
+        </div>
+        <a class="home-link" href="../index.html">Retour à l’accueil</a>
+      </div>
+      <div class="hero-kicker">Messagerie PERFO</div>
+      <h1>Tutoriel : Créer un mot de passe d’application mail</h1>
+      <p class="header-subtitle">Configuration d’un compte mail dans une application externe.</p>
+    </div>
+  </header>
+  <main class="container">
+    <div class="hero">
+      <p class="subtitle">À utiliser uniquement si vous souhaitez ajouter votre compte PERFO dans Outlook, Thunderbird, Apple Mail, Gmail mobile ou une autre application.</p>
+      <div class="notice">Pour utiliser le portail webmail depuis AppPerfo, vous n’avez pas besoin de mot de passe d’application.</div>
+    </div>
 
-  <section><h2>1. À quoi sert le mot de passe d’application ?</h2><p>Le mot de passe d’application sert à connecter un logiciel de messagerie externe à votre compte mail PERFO.</p><ul><li>Il est différent de votre mot de passe Authentik.</li><li>Il peut être supprimé si un appareil est perdu ou remplacé.</li><li>Il évite de saisir votre mot de passe principal dans plusieurs applications.</li></ul></section>
+    <section>
+      <h2>1. À quoi sert le mot de passe d’application ?</h2>
+      <p>Le mot de passe d’application sert à connecter un logiciel de messagerie externe à votre compte mail PERFO.</p>
+      <ul>
+        <li>Il est différent de votre mot de passe AppPerfo.</li>
+        <li>Il peut être supprimé si un appareil est perdu ou remplacé.</li>
+        <li>Il évite de saisir votre mot de passe principal dans plusieurs applications.</li>
+      </ul>
+    </section>
 
-  <section><h2>2. Créer le mot de passe</h2><ol class="steps"><li>Connectez-vous à AppPerfo / Authentik.</li><li>Cliquez sur l’icône <strong>Mail</strong> pour ouvrir SOGo.</li><li>Ouvrez les paramètres de votre compte mail.</li><li>Accédez à la rubrique liée aux <strong>mots de passe d’application</strong> ou aux accès externes.</li><li>Créez un nouveau mot de passe avec un nom explicite, par exemple <code>Outlook PC portable</code> ou <code>iPhone</code>.</li><li>Copiez le mot de passe généré et conservez-le temporairement le temps de configurer votre application.</li></ol><div class="notice">Le mot de passe généré peut ne plus être visible ensuite. Copiez-le immédiatement.</div></section>
+    <section>
+      <h2>2. Créer le mot de passe</h2>
+      <ol class="steps">
+        <li>Connectez-vous à <strong>AppPerfo</strong>.</li>
+        <li>Cliquez sur l’icône <strong>Mail</strong> pour ouvrir le portail webmail.</li>
+        <li>Sur la page du portail webmail, cliquez sur <strong>Single Sign On</strong>.</li>
+        <li>Ouvrez les paramètres de votre compte mail.</li>
+        <li>Accédez à la rubrique liée aux <strong>mots de passe d’application</strong> ou aux accès externes.</li>
+        <li>Créez un nouveau mot de passe avec un nom explicite, par exemple <code>Outlook PC portable</code> ou <code>iPhone</code>.</li>
+        <li>Copiez le mot de passe généré et conservez-le temporairement le temps de configurer votre application.</li>
+      </ol>
+      <div class="notice">Le mot de passe généré peut ne plus être visible ensuite. Copiez-le immédiatement.</div>
+    </section>
 
-  <section><h2>3. Paramètres de configuration mail</h2><p>Dans votre application de messagerie, utilisez les paramètres suivants :</p><table><thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead><tbody><tr><td>Adresse mail</td><td><code>votre.adresse@perfo-formation.fr</code></td></tr><tr><td>Nom d’utilisateur</td><td>Votre adresse mail PERFO complète</td></tr><tr><td>Mot de passe</td><td>Le mot de passe d’application généré</td></tr><tr><td>Serveur entrant IMAP</td><td><code>mail.perfo-formation.fr</code></td></tr><tr><td>Port IMAP</td><td><code>993</code> — SSL/TLS</td></tr><tr><td>Serveur sortant SMTP</td><td><code>mail.perfo-formation.fr</code></td></tr><tr><td>Port SMTP recommandé</td><td><code>465</code> — SSL/TLS</td></tr><tr><td>Port SMTP alternatif</td><td><code>587</code> — STARTTLS</td></tr></tbody></table></section>
+    <section>
+      <h2>3. Configuration dans l’application de messagerie</h2>
+      <p>Dans la majorité des cas, la configuration se fait automatiquement grâce à l’<strong>autodiscover</strong>. Il suffit généralement de saisir votre adresse mail PERFO et le mot de passe d’application généré.</p>
+      <div class="info">Les paramètres ci-dessous sont à renseigner uniquement si votre application de messagerie les demande ou si la détection automatique échoue.</div>
+      <table>
+        <thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr><td>Adresse mail</td><td><code>prenom.nom@perfo-formation.fr</code></td></tr>
+          <tr><td>Nom d’utilisateur</td><td>Votre adresse mail PERFO complète</td></tr>
+          <tr><td>Mot de passe</td><td>Le mot de passe d’application généré</td></tr>
+          <tr><td>Serveur entrant IMAP</td><td><code>mail.perfo-formation.fr</code></td></tr>
+          <tr><td>Port IMAP</td><td><code>993</code> — SSL/TLS</td></tr>
+          <tr><td>Serveur sortant SMTP</td><td><code>mail.perfo-formation.fr</code></td></tr>
+          <tr><td>Port SMTP recommandé</td><td><code>465</code> — SSL/TLS</td></tr>
+          <tr><td>Port SMTP alternatif</td><td><code>587</code> — STARTTLS</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <section><h2>4. Bonnes pratiques</h2><ul><li>Créez un mot de passe différent par appareil ou application.</li><li>Supprimez les mots de passe inutilisés.</li><li>Ne partagez jamais un mot de passe d’application.</li><li>En cas de doute, supprimez-le et recréez-en un nouveau.</li></ul></section>
+    <section>
+      <h2>4. Bonnes pratiques</h2>
+      <ul>
+        <li>Créez un mot de passe différent par appareil ou application.</li>
+        <li>Supprimez les mots de passe inutilisés.</li>
+        <li>Ne partagez jamais un mot de passe d’application.</li>
+        <li>En cas de doute, supprimez-le et recréez-en un nouveau.</li>
+      </ul>
+    </section>
 
-  <section><h2>5. Liens utiles</h2><div class="btn-row"><a class="btn" href="Activation_Messagerie.html">Retour à l’activation de la messagerie</a><a class="btn secondary" href="Informations_Nextcloud_Signature.html">Compléter mes informations Nextcloud</a></div></section>
-</main>
-<footer>Pour toute assistance technique, contactez le support PERFO IT.<br>Document créé le 11 mai 2026 — Messagerie PERFO / Mailcow / SOGo</footer>
+    <section>
+      <h2>5. Liens utiles</h2>
+      <div class="cards">
+        <a class="card-link" href="Activation_Messagerie.html"><div class="card"><h3>Activer sa nouvelle messagerie</h3><p>Revenir au tutoriel principal d’activation de la boîte mail PERFO.</p><span class="card-action">Ouvrir le tutoriel →</span></div></a>
+        <a class="card-link" href="Informations_Nextcloud_Signature.html"><div class="card"><h3>Compléter vos informations Nextcloud</h3><p>Renseigner les informations utilisées pour générer automatiquement votre signature mail.</p><span class="card-action">Ouvrir le tutoriel →</span></div></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer-inner">Pour toute assistance, contactez le support informatique PERFO.</div></footer>
 </body>
 </html>

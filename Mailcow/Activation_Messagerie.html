@@ -4,282 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutoriel : Activer sa nouvelle messagerie PERFO</title>
-  <style>
-    :root {
-      --perfo-blue: #123f8c;
-      --perfo-blue-dark: #0a2b62;
-      --perfo-red: #e30613;
-      --perfo-light: #f4f7fb;
-      --text: #1d2430;
-      --muted: #5c6675;
-      --border: #dbe3ef;
-      --success: #1f8f5f;
-      --warning: #b36b00;
-      --white: #ffffff;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #eef3fa 0%, #ffffff 34%);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--white);
-      border-bottom: 4px solid var(--perfo-blue);
-      padding: 22px 24px;
-      box-shadow: 0 6px 24px rgba(18, 63, 140, 0.08);
-    }
-
-    .header-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .logo {
-      width: 135px;
-      height: auto;
-      display: block;
-    }
-
-    .brand-fallback {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 135px;
-      min-height: 54px;
-      border: 2px solid var(--perfo-blue);
-      color: var(--perfo-blue);
-      font-weight: 800;
-      letter-spacing: 1px;
-      border-radius: 10px;
-    }
-
-    main {
-      max-width: 980px;
-      margin: 28px auto;
-      padding: 0 18px 36px;
-    }
-
-    .hero {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 12px 34px rgba(18, 63, 140, 0.10);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 7px;
-      background: linear-gradient(90deg, var(--perfo-blue), var(--white), var(--perfo-red));
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      color: var(--perfo-blue-dark);
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .subtitle { color: var(--muted); margin: 0; font-size: 1.05rem; }
-
-    .notice {
-      margin: 22px 0;
-      padding: 16px 18px;
-      border-left: 5px solid var(--perfo-red);
-      background: #fff5f5;
-      border-radius: 10px;
-      font-weight: 700;
-    }
-
-    .info {
-      margin: 18px 0;
-      padding: 15px 18px;
-      border-left: 5px solid var(--perfo-blue);
-      background: #f2f6fd;
-      border-radius: 10px;
-    }
-
-    section {
-      margin-top: 24px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 8px 22px rgba(18, 63, 140, 0.06);
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--perfo-blue);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-    }
-
-    h3 { color: var(--perfo-blue-dark); margin-bottom: 8px; }
-
-    ol, ul { padding-left: 24px; }
-    li { margin: 7px 0; }
-
-    code {
-      background: #eef3fa;
-      color: var(--perfo-blue-dark);
-      padding: 2px 6px;
-      border-radius: 6px;
-      font-weight: 700;
-    }
-
-    .steps {
-      counter-reset: step;
-      padding: 0;
-      list-style: none;
-    }
-
-    .steps > li {
-      counter-increment: step;
-      margin: 16px 0;
-      padding: 16px 16px 16px 58px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      position: relative;
-      background: #fbfdff;
-    }
-
-    .steps > li::before {
-      content: counter(step);
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--perfo-blue);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      background: #fbfdff;
-    }
-
-    .card strong { color: var(--perfo-blue-dark); }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      background: var(--perfo-blue);
-      padding: 11px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-
-    .btn.secondary { background: var(--perfo-blue-dark); }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-      overflow: hidden;
-      border-radius: 12px;
-    }
-
-    th, td {
-      border: 1px solid var(--border);
-      padding: 11px;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th { background: #eef3fa; color: var(--perfo-blue-dark); }
-
-    footer {
-      max-width: 980px;
-      margin: 0 auto 28px;
-      padding: 18px;
-      color: var(--muted);
-      font-size: .95rem;
-      text-align: center;
-    }
-
-    @media print {
-      body { background: white; }
-      header, section, .hero { box-shadow: none; }
-      section { break-inside: avoid; page-break-inside: avoid; }
-      .btn-row { display: none; }
-      a { color: var(--perfo-blue-dark); text-decoration: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/perfo-tutos.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="header-inner">
-      <img class="logo" src="../assets/img/logo.svg" alt="Logo PERFO" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand-fallback',textContent:'PERFO'}))" />
-      <div>
-        <strong>Guides PERFO IT</strong><br />
-        <span>Messagerie PERFO — Mailcow / Authentik / SOGo</span>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/img/logo-perfo-blanc.svg" alt="Logo PERFO" />
+          <div class="brand-text">Guides PERFO IT</div>
+        </div>
+        <a class="home-link" href="../index.html">Retour à l’accueil</a>
       </div>
+      <div class="hero-kicker">Messagerie PERFO</div>
+      <h1>Tutoriel : Activer sa nouvelle messagerie PERFO</h1>
+      <p class="header-subtitle">Activation de la nouvelle boîte mail via AppPerfo et le portail webmail.</p>
     </div>
   </header>
-
-  <main>
+  <main class="container">
     <div class="hero">
-      <h1>Tutoriel : Activer sa nouvelle messagerie PERFO</h1>
-      <p class="subtitle">Ce guide explique comment accéder à votre nouvelle boîte mail PERFO depuis AppPerfo / Authentik.</p>
-      <div class="notice">Action obligatoire : vous devez cliquer au moins une fois sur l’icône <strong>Mail</strong> dans Authentik pour créer et activer votre boîte mail.</div>
+      <p class="subtitle">Ce guide explique comment accéder à votre nouvelle boîte mail PERFO depuis AppPerfo.</p>
+      <div class="notice">Action obligatoire : vous devez ouvrir l’application <strong>Mail</strong> depuis AppPerfo, puis cliquer sur le bouton <strong>Single Sign On</strong> sur la page du portail webmail.</div>
     </div>
 
     <section>
       <h2>1. Ce qui change</h2>
-      <p>La messagerie PERFO passe sur une nouvelle architecture basée sur <strong>Mailcow</strong>, avec une connexion centralisée via <strong>Authentik</strong>.</p>
+      <p>La messagerie PERFO passe sur une nouvelle architecture basée sur <strong>Mailcow</strong>, avec une connexion centralisée depuis <strong>AppPerfo</strong>.</p>
       <div class="cards">
-        <div class="card"><strong>Avant</strong><br />Connexion avec votre adresse mail personnelle.</div>
-        <div class="card"><strong>Maintenant</strong><br />Connexion avec votre adresse mail PERFO ou votre nom d’utilisateur.</div>
-        <div class="card"><strong>Création automatique</strong><br />Votre boîte mail est créée automatiquement au premier clic sur l’icône Mail.</div>
+        <div class="card"><strong>Avant</strong><br/>Connexion avec votre adresse mail personnelle.</div>
+        <div class="card"><strong>Maintenant</strong><br/>Connexion avec votre adresse mail PERFO ou votre nom d’utilisateur AppPerfo.</div>
+        <div class="card"><strong>Création automatique</strong><br/>Votre boîte mail est créée automatiquement lors de votre première connexion au portail webmail.</div>
       </div>
     </section>
 
     <section>
-      <h2>2. Se connecter à AppPerfo / Authentik</h2>
-      <p>Lors du changement, votre connexion à Authentik pourra se faire avec l’un des deux identifiants suivants :</p>
+      <h2>2. Se connecter à AppPerfo</h2>
+      <p>Lors du changement, votre connexion à AppPerfo pourra se faire avec l’un des deux identifiants suivants :</p>
       <table>
-        <thead>
-          <tr><th>Méthode</th><th>Exemple</th><th>Remarque</th></tr>
-        </thead>
+        <thead><tr><th>Méthode</th><th>Exemple</th><th>Remarque</th></tr></thead>
         <tbody>
           <tr>
             <td>Nouvelle adresse mail PERFO</td>
@@ -287,34 +49,35 @@
             <td>À utiliser dès que votre nouvelle adresse vous a été communiquée.</td>
           </tr>
           <tr>
-            <td>Nom d’utilisateur</td>
-            <td><code>qmarques</code></td>
+            <td>Nom d’utilisateur AppPerfo</td>
+            <td><code>jdupont</code></td>
             <td>Première lettre du prénom + nom, tout attaché, sans accent ni espace.</td>
           </tr>
         </tbody>
       </table>
-      <div class="info">Exemple : Quentin Marques devient <code>qmarques</code>.</div>
+      <div class="info">Exemple générique : Jean Dupont devient <code>jdupont</code>.</div>
     </section>
 
     <section>
       <h2>3. Activer la boîte mail</h2>
       <ol class="steps">
-        <li>Ouvrez la plateforme <strong>AppPerfo / Authentik</strong>.</li>
+        <li>Ouvrez la plateforme <strong>AppPerfo</strong>.</li>
         <li>Connectez-vous avec votre <strong>nouvelle adresse mail PERFO</strong> ou votre <strong>nom d’utilisateur</strong>.</li>
         <li>Sur l’écran des applications, cliquez sur l’icône <strong>Mail</strong>.</li>
-        <li>Patientez pendant l’ouverture de SOGo.</li>
-        <li>Une fois SOGo ouvert, votre boîte mail est créée et activée.</li>
+        <li>La page du <strong>portail webmail</strong> s’ouvre.</li>
+        <li>Cliquez sur le bouton <strong>Single Sign On</strong>.</li>
+        <li>Une fois connecté au portail webmail, votre boîte mail est créée et activée.</li>
       </ol>
-      <div class="notice">Ne sautez pas cette étape : sans premier clic sur <strong>Mail</strong>, votre boîte mail peut ne pas être créée.</div>
+      <div class="notice">Ne sautez pas cette étape : sans première connexion au portail webmail via <strong>Single Sign On</strong>, votre boîte mail peut ne pas être créée.</div>
     </section>
 
     <section>
-      <h2>4. Utiliser la messagerie avec SOGo</h2>
-      <p>Après activation, vous pouvez consulter vos mails directement depuis SOGo, accessible via l’icône <strong>Mail</strong> dans AppPerfo.</p>
+      <h2>4. Utiliser le portail webmail</h2>
+      <p>Après activation, vous pouvez consulter vos mails directement depuis le <strong>portail webmail</strong>, accessible via l’icône <strong>Mail</strong> dans AppPerfo.</p>
       <ul>
         <li>Vos mails sont accessibles depuis un navigateur web.</li>
-        <li>La connexion se fait via le SSO Authentik.</li>
-        <li>Vous n’avez pas besoin de configurer manuellement un logiciel de messagerie si vous utilisez uniquement SOGo.</li>
+        <li>La connexion se fait depuis le bouton <strong>Single Sign On</strong> du portail webmail.</li>
+        <li>Vous n’avez pas besoin de configurer manuellement un logiciel de messagerie si vous utilisez uniquement le portail webmail.</li>
       </ul>
     </section>
 
@@ -322,18 +85,20 @@
       <h2>5. Après l’activation</h2>
       <p>Deux actions complémentaires peuvent être nécessaires :</p>
       <div class="cards">
-        <div class="card">
-          <strong>Configurer Outlook, Thunderbird ou un téléphone</strong><br />
-          Créez un mot de passe d’application spécifique pour votre logiciel de messagerie.
-        </div>
-        <div class="card">
-          <strong>Compléter vos informations Nextcloud</strong><br />
-          Ces informations servent à générer automatiquement votre signature mail.
-        </div>
-      </div>
-      <div class="btn-row">
-        <a class="btn" href="Mot_de_passe_application.html">Créer un mot de passe d’application</a>
-        <a class="btn secondary" href="Informations_Nextcloud_Signature.html">Compléter mes informations Nextcloud</a>
+        <a class="card-link" href="Mot_de_passe_application.html">
+          <div class="card">
+            <h3>Configurer Outlook, Thunderbird ou un téléphone</h3>
+            <p>Créez un mot de passe d’application spécifique si vous souhaitez ajouter votre compte dans une autre application de messagerie.</p>
+            <span class="card-action">Ouvrir le tutoriel →</span>
+          </div>
+        </a>
+        <a class="card-link" href="Informations_Nextcloud_Signature.html">
+          <div class="card">
+            <h3>Compléter vos informations Nextcloud</h3>
+            <p>Ces informations servent à générer automatiquement votre signature mail.</p>
+            <span class="card-action">Ouvrir le tutoriel →</span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -342,18 +107,14 @@
       <table>
         <thead><tr><th>Problème</th><th>Solution</th></tr></thead>
         <tbody>
-          <tr><td>Je n’arrive pas à me connecter</td><td>Essayez votre nouvelle adresse mail PERFO, puis votre nom d’utilisateur au format <code>pnom</code>.</td></tr>
-          <tr><td>Je ne vois pas ma boîte mail</td><td>Retournez dans AppPerfo et cliquez bien sur l’icône <strong>Mail</strong>.</td></tr>
-          <tr><td>SOGo s’ouvre mais rien ne se passe</td><td>Actualisez la page, puis reconnectez-vous depuis AppPerfo.</td></tr>
+          <tr><td>Je n’arrive pas à me connecter à AppPerfo</td><td>Essayez votre nouvelle adresse mail PERFO, puis votre nom d’utilisateur au format <code>pnom</code>.</td></tr>
+          <tr><td>Je ne vois pas ma boîte mail</td><td>Retournez dans AppPerfo, cliquez sur l’icône <strong>Mail</strong>, puis utilisez le bouton <strong>Single Sign On</strong>.</td></tr>
+          <tr><td>Le portail webmail s’ouvre mais rien ne se passe</td><td>Actualisez la page, puis reconnectez-vous depuis AppPerfo.</td></tr>
           <tr><td>Je veux utiliser Outlook ou mon téléphone</td><td>Consultez le tutoriel sur le mot de passe d’application.</td></tr>
         </tbody>
       </table>
     </section>
   </main>
-
-  <footer>
-    Pour toute assistance technique, contactez le support PERFO IT.<br />
-    Document créé le 11 mai 2026 — Messagerie PERFO / Mailcow / Authentik / SOGo
-  </footer>
+  <footer class="site-footer"><div class="site-footer-inner">Pour toute assistance, contactez le support informatique PERFO.</div></footer>
 </body>
 </html>

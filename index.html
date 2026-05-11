@@ -1,115 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoriels PERFO</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #0082C9;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header img {
-            max-width: 150px;
-            height: auto;
-        }
-        header h1 {
-            margin: 10px 0 0;
-            font-size: 2em;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1em;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #0082C9;
-            border-bottom: 2px solid #0082C9;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: #0082C9;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .category {
-            margin-bottom: 30px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #0082C9;
-            color: white;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriels PERFO</title>
+  <link rel="stylesheet" href="assets/css/perfo-tutos.css" />
 </head>
 <body>
-    <header>
-        <img src="https://cloud.perfo.fr/index.php/s/cKPL4TECZcJt4YT/preview" alt="Logo PERFO">
-        <h1>Guides PERFO IT</h1>
-        <p>Accédez aux guides pour configurer et utiliser nos outils.</p>
-    </header>
-    <div class="container">
-        <section class="category">
-            <h2>AppPerfo et Nextcloud (nouveau drive)</h2>
-            <p>Cette catégorie regroupe les tutoriels pour configurer et utiliser AppPerfo et Nextcloud.</p>
-            <ul>
-                <li><a href="Nextcloud/Nextcloud_AppPerfo.html">Tutoriel : Accès à la Plateforme AppPerfo et Nextcloud</a></li>
-            </ul>
-            <ul>
-                <li><a href="Nextcloud/Nextcloud_Client.html">Tutoriel : Installation et Paramétrage du Client Nextcloud</a></li>
-            </ul>
-            <ul>
-                <li><a href="Nextcloud/Talk_Client.html">Tutoriel : Installation et Paramétrage de Nextcloud Talk (Ios/Android/PC)</a></li>
-            </ul>
-        </section>
-
-        <section class="category">
-            <h2>Messagerie PERFO</h2>
-                <p>Cette catégorie regroupe les tutoriels liés à la nouvelle messagerie PERFO sous Mailcow.</p>
-                
-                <ul>
-                  <li><a href="Mailcow/Activation_Messagerie.html">Tutoriel : Activer sa nouvelle messagerie PERFO</a></li>
-                  <li><a href="Mailcow/Mot_de_passe_application.html">Tutoriel : Créer un mot de passe d’application mail</a></li>
-                  <li><a href="Mailcow/Informations_Nextcloud_Signature.html">Tutoriel : Compléter ses informations Nextcloud pour la signature mail</a></li>
-                </ul>
-        </section>
-        
-        <section class="category">
-            <h2>Autres Ressources</h2>
-            <p>A venir</p>
-
-        </section>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="topbar">
+        <div class="brand">
+          <img src="assets/img/logo-perfo-blanc.svg" alt="Logo PERFO" />
+          <div class="brand-text">Portail documentaire interne</div>
+        </div>
+      </div>
+      <div class="hero-kicker">Guides PERFO IT</div>
+      <h1>Tutoriels et procédures PERFO</h1>
+      <p class="header-subtitle">Retrouvez les guides pour configurer et utiliser les outils internes : AppPerfo, Nextcloud, Talk et la messagerie PERFO.</p>
     </div>
-    <footer>
-        Pour toute assistance, contactez-nous : <a href="mailto:q.marques.perfo@gmail.com" style="color: white;">q.marques.perfo@gmail.com</a>
-    </footer>
+  </header>
+
+  <main class="container">
+    <section class="category">
+      <h2>AppPerfo et Nextcloud</h2>
+      <p>Guides liés à l’accès AppPerfo, au cloud PERFO, au client de synchronisation et à Nextcloud Talk.</p>
+      <div class="tutorial-grid">
+        <a class="tutorial-card" href="Nextcloud/Nextcloud_AppPerfo.html"><strong>Accès à AppPerfo et Nextcloud</strong><span>Création de compte, connexion et accès au cloud via SSO.</span></a>
+        <a class="tutorial-card" href="Nextcloud/Nextcloud_Client.html"><strong>Client Nextcloud</strong><span>Installation et configuration du client sur ordinateur.</span></a>
+        <a class="tutorial-card" href="Nextcloud/Talk_Client.html"><strong>Nextcloud Talk</strong><span>Installation sur Android, iOS et PC, avec notifications.</span></a>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Messagerie PERFO</h2>
+      <p>Guides liés à la nouvelle messagerie PERFO sous Mailcow, avec connexion SSO via AppPerfo.</p>
+      <div class="tutorial-grid">
+        <a class="tutorial-card" href="Mailcow/Activation_Messagerie.html"><strong>Activer sa nouvelle messagerie</strong><span>Premier accès portail webmail et création automatique de la boîte mail.</span></a>
+        <a class="tutorial-card" href="Mailcow/Mot_de_passe_application.html"><strong>Mot de passe d’application</strong><span>Configuration Outlook, Thunderbird, mobile ou autre client mail.</span></a>
+        <a class="tutorial-card" href="Mailcow/Informations_Nextcloud_Signature.html"><strong>Informations Nextcloud</strong><span>Données utilisées pour générer automatiquement la signature mail.</span></a>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Autres ressources</h2>
+      <p>Les prochains tutoriels pourront être ajoutés ici en réutilisant simplement la feuille CSS commune.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="site-footer-inner">Pour toute assistance, contactez le support informatique PERFO.</div></footer>
 </body>
 </html>
