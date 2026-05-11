@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriel : Installation et Paramétrage de Nextcloud Talk</title>
+  <link rel="stylesheet" href="../assets/css/perfo-tutos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/img/logo-perfo-blanc.svg" alt="Logo PERFO" />
+          <div class="brand-text">Guides PERFO IT</div>
+        </div>
+        <a class="home-link" href="../index.html">Retour à l’accueil</a>
+      </div>
+      <div class="hero-kicker">Nextcloud Talk</div>
+      <h1>Tutoriel : Installation et Paramétrage de Nextcloud Talk</h1>
+      <p class="header-subtitle">Guide détaillé pour installer Nextcloud Talk sur Android, iOS et PC, et activer les notifications</p>
+    </div>
+  </header>
+  <main class="container">
+ ANDROID 
+<section>
+<h2>📱 Installation sur Android <span class="platform-badge badge-android">Android</span></h2>
+<h3>Étape 1 : Télécharger l'application</h3>
+<ol class="steps">
+<li>Ouvrez le <strong>Google Play Store</strong> sur votre appareil Android ou cliquer sur le bouton ci-dessous.</li>
+<a class="vc_single_image-wrapper vc_box_border_grey" href="https://play.google.com/store/apps/details?id=com.nextcloud.talk2" rel="noopener" target="_blank">
+<img alt="Google Play" class="vc_single_image-img attachment-full" decoding="async" src="https://nextcloud.com/c/uploads/2022/09/playstore.jpg"/>
+</a>
+<li>Recherchez <strong>"Nextcloud Talk"</strong>.</li>
+<li>Téléchargez l'application officielle développée par <em>Nextcloud</em>.</li>
+<li>Appuyez sur <strong>"Installer"</strong> et acceptez les permissions demandées.</li>
+</ol>
+<h3>Étape 2 : Configurer la connexion au serveur</h3>
+<ol class="steps">
+<li>Ouvrez l'application Nextcloud Talk.</li>
+<li>Dans le champ <strong>"Adresse du serveur"</strong>, saisissez l'URL de votre instance : <code>https://cloud.perfo.fr</code></li>
+<li>Appuyez sur <strong>"Suivant"</strong>.</li>
+<li>Vous serez redirigé vers la page de connexion SSO App Perfo :
+                    <ul>
+<li>Entrez votre nom d'utilisateur ou adresse e-mail</li>
+<li>Entrez votre mot de passe</li>
+<li>Si l'authentification à deux facteurs (2FA) est activée, saisissez le code généré</li>
+</ul>
+</li>
+<li>Après authentification réussie, autorisez l'accès de l'application à votre compte Nextcloud.</li>
+</ol>
+<h3>Étape 3 : Activer les notifications push</h3>
+<ol class="steps">
+<li>Dans l'application Talk, appuyez sur l'icône de votre avatar (en haut à droite).</li>
+<li>Allez dans <strong>Paramètres</strong> → <strong>Notifications</strong> → <strong>Permissions de notifications</strong>.</li>
+<li>Assurez-vous que les notifications de l'application ne sont pas bloquées au niveau du système Android :
+                    <ul>
+<li>Allez dans <strong>Paramètres Android</strong> → <strong>Applications</strong> → <strong>Nextcloud Talk</strong> → <strong>Notifications</strong></li>
+<li>Vérifiez que toutes les catégories de notifications sont activées</li>
+</ul>
+</li>
+</ol>
+</section>
+ iOS 
+<section>
+<h2>🍎 Installation sur iOS <span class="platform-badge badge-ios">iOS</span></h2>
+<h3>Étape 1 : Télécharger l'application</h3>
+<ol class="steps">
+<li>Ouvrez l'<strong>App Store</strong> sur votre iPhone ou iPad ou cliquez sur le bouton ci-dessous.</li>
+<a class="vc_single_image-wrapper vc_box_border_grey" href="https://itunes.apple.com/us/app/nextcloud-talk/id1296825574" rel="noopener" target="_blank">
+<img alt="App Store" class="vc_single_image-img attachment-full entered lazyloaded" data-lazy-sizes="(max-width: 692px) 100vw, 692px" data-lazy-src="https://nextcloud.com/c/uploads/2022/09/appstore.jpg" data-lazy-srcset="https://nextcloud.com/c/uploads/2022/09/appstore.jpg 692w, https://nextcloud.com/c/uploads/2022/09/appstore-300x92.jpg 300w" data-ll-status="loaded" decoding="async" height="212" sizes="(max-width: 692px) 100vw, 692px" src="https://nextcloud.com/c/uploads/2022/09/appstore.jpg" srcset="https://nextcloud.com/c/uploads/2022/09/appstore.jpg 692w, https://nextcloud.com/c/uploads/2022/09/appstore-300x92.jpg 300w" title="appstore" width="692"/>
+<noscript>
+<img alt="App Store" class="vc_single_image-img attachment-full" decoding="async" height="212" sizes="(max-width: 692px) 100vw, 692px" src="https://nextcloud.com/c/uploads/2022/09/appstore.jpg" srcset="https://nextcloud.com/c/uploads/2022/09/appstore.jpg 692w, https://nextcloud.com/c/uploads/2022/09/appstore-300x92.jpg 300w" title="appstore" width="692">
+</img></noscript>
+</a>
+<li>Recherchez <strong>"Nextcloud Talk"</strong>.</li>
+<li>Téléchargez l'application officielle (éditeur : <em>Nextcloud</em>).</li>
+<li>Appuyez sur <strong>"Obtenir"</strong> et authentifiez-vous avec Face ID, Touch ID ou votre identifiant Apple.</li>
+</ol>
+<h3>Étape 2 : Configurer la connexion au serveur</h3>
+<ol class="steps">
+<li>Ouvrez l'application Nextcloud Talk.</li>
+<li>Tapez sur <strong>"Ajouter un serveur"</strong>.</li>
+<li>Saisissez l'URL de votre instance : <code>https://cloud.perfo.fr</code></li>
+<li>Appuyez sur <strong>"Suivant"</strong>.</li>
+<li>Connectez-vous via la page SSO App Perfo :
+                    <ul>
+<li>Entrez vos identifiants App Perfo</li>
+<li>Validez l'authentification à deux facteurs si activée</li>
+</ul>
+</li>
+<li>Autorisez l'application à accéder à votre compte Nextcloud.</li>
+</ol>
+<h3>Étape 3 : Activer les notifications push</h3>
+<ol class="steps">
+<li>Lors de la première utilisation, iOS vous demandera l'autorisation d'envoyer des notifications : appuyez sur <strong>"Autoriser"</strong>.</li>
+<li>Si vous avez refusé par erreur, allez dans :
+                    <ul>
+<li><strong>Réglages iOS</strong> → <strong>Notifications</strong> → <strong>Nextcloud Talk</strong></li>
+<li>Activez <strong>"Autoriser les notifications"</strong></li>
+<li>Cochez les options : <em>Bannières</em>, <em>Sons</em>, <em>Badges</em></li>
+</ul>
+</li>
+<li>Dans l'application Talk : <strong>Paramètres</strong> → <strong>Notifications</strong> :
+                    <ul>
+<li>✅ Activer les notifications de messages</li>
+<li>✅ Activer les notifications d'appels entrants</li>
+<li>✅ Personnaliser les sons et vibrations</li>
+</ul>
+</li>
+</ol>
+</section>
+ DESKTOP 
+<section>
+<h2>💻 Installation sur PC <span class="platform-badge badge-desktop">Desktop</span></h2>
+<h3>Étape 1 : Télécharger le client Talk Desktop</h3>
+<p>Nextcloud Talk propose un client desktop dédié pour Windows, macOS et Linux [[5]].</p>
+<table>
+<thead>
+<tr>
+<th>Système</th>
+<th>Lien de téléchargement</th>
+<th>Méthode alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Windows</strong></td>
+<td><a href="https://github.com/nextcloud/talk-desktop/releases" rel="noopener" target="_blank">GitHub Releases</a></td>
+<td><code>winget install Nextcloud.Talk</code> [[1]]</td>
+</tr>
+<tr>
+<td><strong>macOS</strong></td>
+<td><a href="https://github.com/nextcloud/talk-desktop/releases" rel="noopener" target="_blank">GitHub Releases</a> (Universal)</td>
+<td>Homebrew (à venir)</td>
+</tr>
+<tr>
+<td><strong>Linux</strong></td>
+<td><a href="https://github.com/nextcloud/talk-desktop/releases" rel="noopener" target="_blank">AppImage / Flatpak</a></td>
+<td>Flatpak : <code>flatpak install flathub com.nextcloud.Talk</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Étape 2 : Installation</h3>
+<ul>
+<li><strong>Windows</strong> : Exécutez le fichier <code>.exe</code> téléchargé et suivez l'assistant d'installation [[6]].</li>
+<li><strong>macOS</strong> : Ouvrez le fichier <code>.dmg</code>, glissez l'application dans le dossier Applications.</li>
+<li><strong>Linux</strong> : 
+                    <ul>
+<li>AppImage : Rendez le fichier exécutable (<code>chmod +x</code>) puis lancez-le</li>
+<li>Flatpak : Installez via la commande indiquée ci-dessus</li>
+</ul>
+</li>
+</ul>
+<h3>Étape 3 : Configuration et connexion</h3>
+<ol class="steps">
+<li>Lancez Nextcloud Talk Desktop.</li>
+<li>Dans le champ <strong>"Server URL"</strong>, entrez : <code>https://cloud.perfo.fr</code></li>
+<li>Cliquez sur <strong>"Connect"</strong>.</li>
+<li>Une fenêtre de navigateur s'ouvre pour l'authentification SSO via App Perfo :
+                    <ul>
+<li>Connectez-vous avec vos identifiants</li>
+<li>Validez l'accès pour l'application Talk</li>
+</ul>
+</li>
+<li>De retour dans l'application, vos conversations apparaissent.</li>
+</ol>
+<h3>Étape 4 : Activer les notifications desktop</h3>
+<ol class="steps">
+<li>Dans Talk Desktop, cliquez sur l'icône <strong>⚙️ Paramètres</strong> (en bas à gauche).</li>
+<li>Allez dans l'onglet <strong>Notifications</strong>.</li>
+<li>Activez les options que vous souhaitez activer </li>
+
+</ol>
+</section>
+ CONFIGURATION AVANCÉE 
+<section>
+<h2>⚙️ Configuration avancée des notifications</h2>
+<h3>Personnalisation par conversation</h3>
+<p>Dans chaque conversation Talk (mobile ou desktop) :</p>
+<ol class="steps">
+<li>Ouvrez la conversation souhaitée.</li>
+<li>Appuyez sur le nom de la conversation ou l'icône <strong>⋮</strong> / <strong>⋯</strong>.</li>
+<li>Allez dans <strong>infos sur la conversation</strong>.</li>
+<li>Choisissez le niveau de notification pour chaque conversation en fonction de vos préférences</li>
+</ol>
+<h3>Mode "Ne pas déranger"</h3>
+<ul>
+<li>Sur mobile : Utilisez le mode "Ne pas déranger" du système pour suspendre temporairement toutes les notifications.</li>
+<li>Dans Nextcloud : Vous pouvez définir des plages horaires silencieuses dans <strong>Votre avatar en haut a droite de nextcloud → Parametre Personnels → Disponibilités</strong></li>
+</ul>
+</section>
+ DÉPANNAGE 
+<section>
+<h2>🔧 Dépannage des notifications</h2>
+<table>
+<thead>
+<tr>
+<th>Problème</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aucune notification reçue sur Android</td>
+<td>• Vérifier que Google Play Services est actif<br/>• Désactiver l'optimisation batterie pour Talk<br/>• Vérifier les permissions système [[24]]</td>
+</tr>
+<tr>
+<td>Notifications iOS retardées</td>
+<td>• Vérifier la connexion Internet<br/>• S'assurer que l'app n'est pas fermée manuellement<br/>• Redémarrer l'appareil</td>
+</tr>
+<tr>
+<td>Notifications desktop non affichées</td>
+<td>• Vérifier les paramètres de notification du système d'exploitation<br/>• S'assurer que Talk n'est pas en mode "silencieux"<br/>• Redémarrer l'application</td>
+</tr>
+<tr>
+<td>Erreur de connexion au serveur</td>
+<td>• Vérifier l'URL du serveur (<code>https://cloud.perfo.fr</code>)<br/>• Confirmer que le module Talk est activé côté serveur<br/>• Contacter l'administrateur</td>
+</tr>
+</tbody>
+</table>
+<div class="tip">
+<strong>🌐 Documentation officielle :</strong> Pour plus d'informations, consultez la documentation utilisateur Nextcloud Talk : <a href="https://docs.nextcloud.com/server/latest/user_manual/en/groupware/talk.html" rel="noopener" target="_blank">docs.nextcloud.com</a> [[18]]
+            </div>
+</section>
+ CONSEILS 
+<section>
+<h2>💡 Conseils d'utilisation</h2>
+<ul>
+<li><strong>Gardez les applications à jour :</strong> Les mises à jour apportent des corrections de sécurité et de nouvelles fonctionnalités.</li>
+<li><strong>Testez vos notifications :</strong> Après configuration, demandez à un collègue de vous envoyer un message test pour vérifier la réception.</li>
+<li><strong>Respectez la vie privée :</strong> Nextcloud Talk étant auto-hébergé, vos données de communication restent sous votre contrôle.</li>
+</ul>
+</section>
+  </main>
+  <footer class="site-footer"><div class="site-footer-inner">Pour toute assistance, contactez le support informatique PERFO.</div></footer>
+</body>
+</html>
